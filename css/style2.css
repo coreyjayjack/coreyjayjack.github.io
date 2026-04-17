@@ -1,0 +1,106 @@
+/*I got this font off of google fonts, the font weight is 400px to make the text more bold*/
+.balthazar-regular {
+font-family: "Balthazar", serif;
+font-weight: 400;
+font-style: normal;
+}
+/*just used to change the background color*/
+body {
+background-color: rgb(219, 188, 188);
+overflow:hidden;
+}
+/*paragraph editing to make the subtitle better connected rather then with the black font that is hard to read with the background image*/
+p {
+font-family: "Balthazar", serif;
+color: rgb(175, 77, 77);
+font-size: larger;
+font-style: italic;
+font-weight: 700;
+text-align: center;
+}
+/*changes the font, removes the bullets, made the background color a darker red*/
+.navbar ul{
+font-family: "Balthazar", serif;
+list-style-type: none;
+background-color: rgb(117, 17, 17);
+padding: 0px;
+margin: 0px;
+overflow: hidden;
+position:sticky;
+text-align: center;
+}
+/*changes the font color, font itself, removes the underlines, and makes each link into a block*/
+.navbar a{
+color: rgb(255, 255, 255);
+text-decoration: none;
+padding:10px;
+display: block;
+text-align: center;
+}
+/*gives the nav bar a different color when i put the pointer over a specific link*/
+.navbar a:hover{
+background-color: rgb(197, 57, 57);
+}
+/*i used this to position the links inside the nav bar but i am still trying to figure out how to center it instead*/
+.navbar li{
+float:inline-start;
+}
+h1 {
+font-family: "Balthazar", serif;
+color: rgb(117, 17, 17);
+text-align: center;
+}
+/*I put the position to relative so that the image gets smaller as the page gets smaller without messing up the resz*/
+.hero {
+position:relative;
+width:100%;
+overflow:hidden;
+}
+/*everything that has the class=hero-a-content is affected by this css, I couldn't get the image to work right on the index so I got linked the image in the css instead.*/
+.hero-a{
+background-image:url(../images/ninjago1.png);
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+height: 100%;
+}
+footer {
+font-family: "Balthazar", serif;
+background-color: rgb(117, 17, 17);
+height: 200px;
+}
+/*Figured it out, border radius makes the clean edge curves, max width and height are adjusted to make the images all the same inside the cards, margins make the gaps between cards, overflow hidden makes extra parts of the images hidden so they don't go over the card sizes, display inline grid makes each image line up in across rather then down. */
+.card {
+border-radius: 20px;
+overflow: hidden;
+flex-direction:row;
+display: inline-grid;
+max-width: 500px;
+max-height: 400px;
+margin-bottom: 2%;
+margin-right: 2%;
+margin-top: 10px;
+}
+/*i made the height and width big enough to fit the images well and to make sure the cards can fit decently across, object-fit to make the image stay inside the card*/
+.card img{
+width: 350px;
+height: 250px;
+display: grid;
+object-fit: cover;
+overflow: hidden;
+}
+/*each of the @media makes it so that the images and items on the pages adjust to the different formats or platforms, 600px for mobile devices, 850px for tablets/ipads, and 1200px for desktop screens
+also makes sure there is no scroll bar on the bottom of the page*/
+@media (min-width: 600px){
+.grid{
+grid-template-columns: repeat(1, 1fr);
+}
+}
+@media (min-width: 1200px){
+.grid{
+grid-template-columns: repeat(3, 1fr);
+}
+}

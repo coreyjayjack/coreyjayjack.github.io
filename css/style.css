@@ -1,0 +1,141 @@
+/* Google font class */
+.balthazar-regular {
+font-family: "Balthazar", serif;
+font-weight: 400;
+font-style: normal;
+}
+
+/* Body */
+body,html {
+margin: 0;
+background-color: rgb(201, 198, 198);
+font-family: "Balthazar", serif;
+overflow-x: hidden;
+}
+
+/* Headings */
+h1 {
+font-family: "Balthazar", serif;
+color: rgb(211, 100, 100);
+text-align: center;
+margin-bottom: 10px;
+}
+
+/* Paragraph */
+p {
+font-family: "Balthazar", serif;
+color: rgb(93, 24, 24);
+font-size: 1.2rem;
+font-style: italic;
+font-weight: 700;
+text-align: center;
+}
+
+/* Hero section */
+.hero {
+position: relative;
+width: 100%;
+overflow: hidden;
+}
+
+.hero-a {
+background-image: url("../images/ninjago1.png");
+background-size: cover;
+background-position: center;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+height: 50vh;
+}
+
+.hero-a-content {
+background-color: rgba(255, 255, 255, 0.65);
+padding: 20px;
+border-radius: 10px;
+}
+
+/* Navigation */
+.navbar ul {
+font-family: "Balthazar", serif;
+list-style-type: none;
+background-color: rgb(117, 17, 17);
+padding: 0;
+margin: 0;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+position: sticky;
+top: 0;
+}
+
+.navbar a {
+color: rgb(255, 255, 255);
+text-decoration: none;
+padding: 12px 18px;
+display: block;
+text-align: center;
+position: sticky;
+}
+
+.navbar a:hover {
+background-color: rgb(197, 57, 57);
+}
+
+/* Card grid */
+.grid {
+display: grid;
+grid-template-columns: 1fr;
+gap: 20px;
+padding: 20px;
+}
+
+.card-link {
+text-decoration: none;
+}
+
+.card {
+background-color: white;
+overflow: hidden;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+transition: transform 0.3s ease;
+}
+
+.card:hover {
+transform: scale(1.03);
+}
+
+.card img {
+width: 100%;
+display: block;
+height: auto;
+}
+
+/* Footer */
+footer {
+font-family: "Balthazar", serif;
+background-color: rgb(138, 46, 46);
+color: white;
+text-align: center;
+padding: 15px;
+width: 100%;
+}
+
+/* Media Queries */
+@media (min-width: 600px) {
+.grid {
+grid-template-columns: repeat(2, 1fr);
+}
+}
+
+@media (min-width: 850px) {
+.grid {
+grid-template-columns: repeat(3, 1fr);
+}
+}
+
+@media (min-width: 1200px) {
+.grid {
+grid-template-columns: repeat(4, 1fr);
+}
+}
